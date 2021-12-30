@@ -5,7 +5,7 @@ if __name__ == '__main__':
     if lng == 0:
         print("{:d} arguments.".format(lng))
     elif lng == 1:
-        print("{:d} arguments:".format(lng))
+        print("{:d} argument:".format(lng))
         print("1: {}".format(sys.argv[1]))
     else:
         print("{:d} arguments:".format(lng))
