@@ -38,19 +38,6 @@ class Rectangle:
         else:
             self.__height = value
 
-    def __repr__(self):
-        return("Rectangle({:d}, {:d})".format(self.__width, self.__height))
-
-    def __str__(self):
-        total = ""
-        if self.__height == 0 or self.width == 0:
-            return(total)
-        for i in range(self.__height):
-            total += ("#" * self.__width)
-            if i is not self.__height - 1:
-                total += "\n"
-                return(total)
-
     def area(self):
         return(self.__width * self.__height)
     """Print the area of Rectangle"""
@@ -60,3 +47,14 @@ class Rectangle:
             return(0)
         return(self.width + self.__height) * 2
     """Print the perimeter of Rectangle"""
+
+    def __str__(self):
+        string = ""
+        if self.__width != 0 and self.__height != 0:
+            string += '\n'.join("#" * self.__width
+                                for i in range(self.__height))
+
+        return(string)
+
+    def __repr__(self):
+        return("Rectangle({}, {})".format(self.__width, self.height))
