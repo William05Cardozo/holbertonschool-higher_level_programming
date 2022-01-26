@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Difine a class"""
 
 
 class Rectangle:
@@ -57,5 +57,3 @@ class Rectangle:
             return(0)
         return(self.width + self.__height) * 2
     """Print the perimeter of Rectangle"""
-
-
