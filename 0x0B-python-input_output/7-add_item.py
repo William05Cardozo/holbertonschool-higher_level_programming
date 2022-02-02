@@ -9,7 +9,7 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 """Name of file"""
 
 
-filename = "add_items.json"
+filename = "add_item.json"
 
 try:
     json_list = load_from_json_file(filename)
