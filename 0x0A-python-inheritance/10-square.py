@@ -6,6 +6,7 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 """Define a class"""
 
+
 class Square(Rectangle):
     """The name class is Square"""
 
