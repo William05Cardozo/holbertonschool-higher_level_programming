@@ -11,10 +11,10 @@ class Square(Rectangle):
     """The class name is Square"""
     def __init__(self, size):
         """Init the class"""
-    self.integer_validator("size", size)
-    super().__init__(size, size)
-    self.__size = size
+        self.integer_validator("size", size)
+        super().__init__(size, size)
+        self.__size = size
 
     def __str__(self):
         """Return Square"""
-    return "[Square] {:d}/{:d}".format(self.__size, self.__size)
+        return "[Square] {:d}/{:d}".format(self.__size, self.__size)
