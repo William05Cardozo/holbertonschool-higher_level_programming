@@ -15,11 +15,11 @@ class Student:
         """Method Json"""
         if attrs is None:
             return(self.__dict__)
-        new_dict = {}
+        new_list = {}
         for i in attrs:
             try:
-                new_dict[i] = self.__dict__[i]
+                new_list[i] = self.__dict__[i]
             except:
                 pass
         """Return new list"""
-        return(new_dict)
+        return(new_list)
