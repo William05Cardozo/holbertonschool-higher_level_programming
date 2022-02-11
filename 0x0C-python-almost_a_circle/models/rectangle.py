@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """Define a class"""
 from models.base import Base
 
@@ -71,3 +72,12 @@ class Rectangle(Base):
     def area(self):
         """Return area"""
         return(self.__width * self.__height)
+
+    def display(self):
+        """function display"""
+        """Print string of this rectangle"""
+        for i in range(self.y):
+            print()
+        for j in range(self.height):
+            print(" " * self.x, end="")
+            print("#" * self.width)
