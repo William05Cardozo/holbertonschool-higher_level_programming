@@ -6,10 +6,10 @@ request(fargs[2], function (error, response, body) {
     console.log(error);
   }
   let count = 0;
-  const id = JSON.parse(body).results;
-  for (let i = 0; i < id.length; i++) {
-    const character = id[i].characters.find((c) => {
-      return (c.match(/18/));
+  const js = JSON.parse(body).results;
+  for (let i = 0; i < js.length; i++) {
+    const character = js[i].characters.find((js) => {
+      return (js.match(/18/));
     });
     if (character !== undefined) {
       count++;
