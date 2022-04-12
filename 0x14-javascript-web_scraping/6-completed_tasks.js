@@ -1,21 +1,22 @@
 #!/usr/bin/node
 const request = require('request');
 const fargs = process.argv;
+const url = fargs[2];
 
-request(fargs[2], function (error, response, body) {
+request(url, function (error, response, body) {
   if (error) {
     console.log(error);
   } else {
     const js = JSON.parse(body);
-    const list = {};
-    for (let i = 0; i < js.length; i++) {
+    const dicto = {};
+    for (const i of js) {
       if (i.completed === true) {
-        if (list[i.userId] === undefined) {
-          list[i.userId] = 0;
+        if (dicto[i.userId] === undefined) {
+          dicto[i.userId] = 0;
         }
-        list[i.userId] += 1;
+        dicto[i.userId] += 1;
       }
     }
-    console.log(list);
+    console.log(dicto);
   }
 });
