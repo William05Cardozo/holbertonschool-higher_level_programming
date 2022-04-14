@@ -1,3 +1,3 @@
-$('DIV#update_header').click(function() {
-    $('header').replaceWith('New Header!!!')
+$('DIV#update_header').click(function () {
+  $('header').replaceWith('New Header!!!');
 });
