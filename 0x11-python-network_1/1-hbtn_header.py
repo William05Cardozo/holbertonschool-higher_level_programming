@@ -7,6 +7,7 @@ displays the value of the X-Request-Id
 from urllib.request import urlopen
 from sys import argv
 
-with urlopen(argv[1]) as response:
-    res = response.getheader("X-Request-Id")
-    print(res)
+if __name__ == "__main__":
+    with urlopen(argv[1]) as response:
+        res = response.getheader("X-Request-Id")
+        print(res)
