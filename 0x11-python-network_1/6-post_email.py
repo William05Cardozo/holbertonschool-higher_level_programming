@@ -9,6 +9,6 @@ import requests
 
 if __name__ == "__main__":
     url = argv[1]
-    value = argv[2]
-    r = requests.post(url, data={'email': value})
+    value = {'email': argv[2]}
+    r = requests.post(url, data=value)
     print(r.text)
