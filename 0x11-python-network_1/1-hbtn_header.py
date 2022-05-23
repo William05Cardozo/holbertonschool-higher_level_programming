@@ -9,4 +9,4 @@ from sys import argv
 
 with urlopen(argv[1]) as response:
     res = response.getheader('X-Request-Id')
-print(res)
+    print(res)
