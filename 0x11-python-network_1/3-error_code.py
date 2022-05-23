@@ -4,7 +4,7 @@ This script send a request to the URL and
 manage a HTTPError
 """
 
-import sys from argv
+from sys import argv
 import urllib.request
 
 if __name__ == "__main__":
